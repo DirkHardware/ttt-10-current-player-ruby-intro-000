@@ -11,25 +11,25 @@ board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 #   end
 # end
 
-# def current_player(board)
-#   turn = turn_count(board)
-#   if turn % 2 == true
-#     return "O"
-#   else
-#     return "X"
-#   end
-# end
-
 def current_player(board)
   turn = turn_count(board)
-  if turn == 0
-    return "X"
-  elsif turn == 1
+  if turn % 2 == true
     return "O"
-  elsif turn == 2
+  else
     return "X"
   end
 end
+
+# def current_player(board)
+#   turn = turn_count(board)
+#   if turn == 0
+#     return "X"
+#   elsif turn == 1
+#     return "O"
+#   elsif turn == 2
+#     return "X"
+#   end
+# end
 
 def turn_count(board)
   turn_count = 0
